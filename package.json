@@ -1,6 +1,6 @@
 {
   "name": "site",
-  "homepage": "minwoosite",
+  "homepage": "/minwoosite/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
