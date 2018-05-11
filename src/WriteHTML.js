@@ -9,6 +9,7 @@ class WriteHTML extends Component {
             <div className="Write-HTML">
             <HelloWorld name="para" test="test-data" />
             <ImageCall />
+            <MakeCard />
               <img src={logo} className="App-logo" alt="logo" />  
             </div>
         );
@@ -29,6 +30,21 @@ function ImageCall () {
         <div>
             <p>View Image</p>
             <img src={Image} alt="im" />
+        </div>
+    );
+}
+
+function MakeCard(){
+    var cardStyle = {
+        height: 200,
+        width: 150,
+        padding: 10,
+        backgroundColor: "#FFF",
+        WebkitFilter: "drop-shadow(0px 0px 5px #666)",
+        filter: "drop-shadow(0px 0px 5px #666)"
+    };
+    return (
+        <div style={cardStyle}>
         </div>
     );
 }
