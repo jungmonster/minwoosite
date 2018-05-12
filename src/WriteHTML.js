@@ -7,16 +7,16 @@ class WriteHTML extends Component {
     render() {
         return (
             <div className="Write-HTML">
-            <HelloWorld name="para" test="test-data" />
-            <ImageCall />
-            <MakeCard />
-              <img src={logo} className="App-logo" alt="logo" />  
+                <HelloWorld name="para" test="test-data" />
+                <ImageCall />
+                <LightningCounterDisplay />
+                <img src={logo} className="App-logo" alt="logo" />
             </div>
         );
     }
 }
 
-function HelloWorld (props) {
+function HelloWorld(props) {
     return (
         <div>
             <h1> Function Call and send parameter {props.name} ! </h1>
@@ -25,7 +25,7 @@ function HelloWorld (props) {
     );
 }
 
-function ImageCall () {
+function ImageCall() {
     return (
         <div>
             <p>View Image</p>
@@ -34,7 +34,7 @@ function ImageCall () {
     );
 }
 
-function MakeCard(){
+function MakeCard() {
     var cardStyle = {
         height: 200,
         width: 150,
@@ -46,6 +46,53 @@ function MakeCard(){
     return (
         <div style={cardStyle}>
         </div>
+    );
+}
+
+function LightningCounterDisplay() {
+    var divStyle = {
+        width: 250,
+        textAlign: "Center",
+        backgroundColor: "black",
+        padding: 40,
+        fontFamily: "sans-serif",
+        color: "#999",
+        borderRadius: 10
+    }
+
+    return (
+        <div style={divStyle}>
+            <LightningCounter />
+        </div>
+    );
+}
+
+class LightningCounter extends Component {
+    state = { strikes:0  };
+
+    render() {
+        return (
+            <h1>{this.state.strikes}</h1>
+        );
+    }
+}
+
+
+var DisplayTa = function DisplayMode() {
+    return (
+        <div>
+            <p>this.props.color</p>
+            <p>this.props.num</p>
+            <p>this.props.size</p>
+        </div>
+    );
+}
+
+var LavbelTa2 = function LabelMode() {
+    return (
+        <DisplayTa color={this.props.color}
+            num={this.props.num}
+            size={this.props.size} />
     );
 }
 
