@@ -1,0 +1,13 @@
+.CompStyle {
+    text-align: center;
+    font-size: 30px;
+    font-style: blue;
+}
+.CompStyle-font {
+    color : blue;
+}
+
+.CompStyle-p {
+    color: blanchedalmond;
+    background-color: blueviolet;
+}

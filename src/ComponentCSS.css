@@ -1,0 +1,8 @@
+.ComponentCSS{
+    text-align: center;
+    padding : 10;
+    margin : 10;
+    background-color: #FFF;
+    -webkit-filter: drop-shadow(0px 0px 5px #666);
+    filter: drop-shadow(0px 0px 5px #666);
+}
