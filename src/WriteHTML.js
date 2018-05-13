@@ -9,12 +9,43 @@ class WriteHTML extends Component {
             <div className="Write-HTML">
                 <HelloWorld name="para" test="test-data" />
                 <ImageCall />
+                <Counter />
                 <LightningCounterDisplay />
                 <img src={logo} className="App-logo" alt="logo" />
             </div>
         );
     }
 }
+
+class Counter extends Component {
+    state = {
+      number: 0
+    }
+  
+    handleIncrease = () => {
+      this.setState({
+        number: this.state.number + 1
+      });
+    }
+  
+    handleDecrease = () => {
+      this.setState({
+        number: this.state.number - 1
+      });
+    }
+  
+    render() {
+      return (
+        <div>
+          <h1>카운터</h1>
+          <div>값: {this.state.number}</div>
+          <button onClick={this.handleIncrease}>+</button>
+          <button onClick={this.handleDecrease}>-</button>
+        </div>
+      );
+    }
+  }
+  
 
 function HelloWorld(props) {
     return (
@@ -68,7 +99,7 @@ function LightningCounterDisplay() {
 }
 
 class LightningCounter extends Component {
-    state = { strikes:0  };
+    state = { strikes:0 };
 
     render() {
         return (
