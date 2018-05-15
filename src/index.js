@@ -8,6 +8,7 @@ import Comp02 from './Comp02';
 import Comp03_Script from './Comp03_Script';
 import Comp04_props from './Comp04_props'
 import Comp05_function from './Comp05_function';
+import Comp06_defaultproperty from './Comp06_defaultproperty'
 import registerServiceWorker from './registerServiceWorker';
 
 ReactDOM.render(<App />, document.getElementById('root'));
@@ -16,4 +17,5 @@ ReactDOM.render(<Comp02 />, document.getElementById('comp02'));
 ReactDOM.render(<Comp03_Script />, document.getElementById('comp03_Script'));
 ReactDOM.render(<Comp04_props name="react" />, document.getElementById('comp04_props'));
 ReactDOM.render(<Comp05_function />, document.getElementById('comp05_function'));
+ReactDOM.render(<Comp06_defaultproperty/>, document.getElementById('comp06_defaultproperty'));
 registerServiceWorker();
