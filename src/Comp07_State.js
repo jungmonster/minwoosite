@@ -7,13 +7,14 @@ class Comp07_State extends Component {
         return (
             <div className="ComponentCSS">
                 <h1>Component 07 State</h1>
-                <Counter />
+                <Counter01 />
+                <Counter02 />
             </div>
         );
     }
 }
 
-class Counter extends Component {
+class Counter01 extends Component {
     /* Class Field*/
     state = {
         number:0
@@ -42,6 +43,38 @@ class Counter extends Component {
 
 }
 
+class Counter02 extends Component {
+    /* Class Field*/
+    state = {
+        number:0
+    }
+    handleIncrease = () => {
+        const {number} = this.state;
+        this.setState({
+            number: number +1
+        });
+    }
+    handleDecrease = () => {
+        this.setState(
+            // destructuring assignment(비구조화 할당)
+            ({number}) => ({
+                number : number -1
+            })
+        );
+    }
+
+    render(){
+        return (
+            <div>
+                <hi>Counter </hi>
+                <div>State Value is {this.state.number}</div>
+                <button onClick={this.handleIncrease}>+ button</button>
+                <button onClick={this.handleDecrease}>- button</button>
+            </div>
+        );
+    }
+
+}
 
 
 export default Comp07_State;
