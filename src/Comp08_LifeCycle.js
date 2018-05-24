@@ -52,7 +52,13 @@ class LifeComp extends Component {
         // 기본적으로 'true'로 설정
         // false를 반환하면 render()를 호출하지 않음
         console.log('shouldComponentUpdate');
-        return true;
+        // number가 5의 배수면 무시
+        if (nextState.number % 3 === 0) {
+            return false;
+        }
+        else{
+            return true;
+        }
     }
     componentWillUpdate(nextProps, nextState) {
         // shouldComponentUpdate에서 true를 반환 했을 때 호출
@@ -94,6 +100,7 @@ class LifeComp extends Component {
         return (
             <div>
                 <h1>LifeCycle </h1>
+                <h2>3의 배수 값은 출력 안함</h2>
                 <div>값: {this.state.number}</div>
                 <button onClick={this.handleIncrease}>+</button>
                 <button onClick={this.handleDecrease}>-</button>
