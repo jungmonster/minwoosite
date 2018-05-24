@@ -19,4 +19,18 @@ Head Marks
 
 > [minwoo site](https://jungmonster.github.io/minwoosite)
 >>> minwoo site[https://jungmonster.github.io/minwoosite]
+>> [minwoo site][https://jungmonster.github.io/minwoosite]
 >>> https://jungmonster.github.io/minwoosite
+
+# List
++ apple
+ + banana
+  + mango
+
+* apple
+ * banana
+  * mango
+
+- apple
+ - banana
+  - mango
