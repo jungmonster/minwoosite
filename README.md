@@ -24,13 +24,13 @@ Head Marks
 
 # List
 + apple
- + banana
-  + mango
+    + banana
+        + mango
 
 * apple
- * banana
-  * mango
+    * banana
+        * mango
 
 - apple
- - banana
-  - mango
+    - banana
+        - mango
